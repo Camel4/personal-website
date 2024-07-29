@@ -1,120 +1,209 @@
 :root {
-    --bg: #27374D;
-    --accent: #526D82;
-    --accent-2: #9DB2BF;
-    --text: #DDE6ED;
+  --blue: #00a0e0;
+  --black: #171818;
+  --bg: #ECF0F0;
 }
 
-body {
-    background-color: var(--bg);
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: var(--text);
-    margin: 0;
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+#name {
+  font-size: 40px;
+  color: var(--bg);
+  margin-top: -10px;
+}
+
+.topnav {
+  background-color: var(--black);
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  z-index: 1000; 
+  box-sizing: border-box; 
+}
+
+.topnav a {
+  float: left;
+  color: var(--blue);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 15px;
+  font-family: "Open Sans", sans-serif;
+  margin-top: 7px;
+}
+
+
+
+.topnav a:hover {
+  background-color: rgba(12, 49, 107, 0.5);
+  border-radius: 10px;
+}
+
+.video_container {
+  position: relative;
+  width: 100%;
+  height: 110%;
+  overflow: hidden; 
+}
+
+.video_background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 110%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 110%;
+  background: rgba(46, 46, 46, 0.74); 
 }
 
 .container {
-    display: flex;
+  position: relative;
+  height: 110%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
 }
 
-
-.post {
-    background-color: var(--accent);
-    border-radius: 15px;
-    padding: 20px;
-    margin-bottom: 20px;
+#test {
+  transform: rotate(90deg);
+  color: white;
+  font-size: 80px;
+  font-family: monospace;
+  margin-top: 50%;
+  margin-bottom: -50%;
 }
 
-.post h2 {
-    margin-top: 0;
+#scrolls {
+  color: white;
+  text-align: center;
+  margin-top: 30%;
+  margin-bottom: -15%;
 }
 
-.post a {
-    color: var(--text);
-    text-decoration: none;
-    transition: color 0.3s ease;
+.t1 {
+  color: var(--blue);
+  text-align: center;
+  font-size: 25px;
+  font-family: "Open Sans", sans-serif;
+  margin-bottom: -10%; 
+  margin-top: -20%;
 }
 
-.post a:hover {
-    color: var(--accent-2);
+.t2 {
+  color: white;
+  text-align: center;
+  font-size: 80px;
+  font-family: "Open Sans", sans-serif;
+  position: relative;
 }
 
-/* Your existing CSS remains unchanged */
-
-header {
-    position: fixed;
-    top: 0;
-    text-align: center;
-    font-size: 110%;
-    letter-spacing: 2px;
-    word-spacing: 20px;
-    width: 100%;
-    background-color: var(--accent);
-    padding: 10px 0;
-    z-index: 100; /* Ensure the header is above other elements */
+.t2::after {
+  content: '';
+  display: block;
+  width: 800px;
+  height: 2px;
+  background: var(--blue); 
+  margin: 10px auto 0;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+.t3 {
+  color: white;
+  text-align: center;
+  font-size: 25px;
+  font-family: "Open Sans", sans-serif;
+  margin-top: -20px;
 }
 
-nav ul li {
-    display: inline;
-    margin-right: 20px;
+#title {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 269;
+  font-size: 65px;
+  text-align: center;
 }
 
-nav ul li a {
-    text-decoration: none;
-    color: var(--text);
-    transition: color 0.3s ease;
+.about {
+  padding: 20px 13% 20px; 
+  color: black;
+  text-align: center;
+  min-height: 80%; 
+  background-color: var(--bg);
+
+  font-family: "Open Sans", sans-serif;
+  font-size: x-large;
+  line-height: 2em;
+  text-align: left;
 }
 
-nav ul li a:hover {
-    color: var(--accent-2);
+.experience {
+  padding: 60px 13% 20px; 
+  color: black;
+  text-align: center;
+  min-height: 80%; 
+  background-color: var(--bg);
+
+  font-family: "Open Sans", sans-serif;
+  font-size: x-large;
+  line-height: 2em;
+  text-align: left;
 }
 
-.sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 25%; /* Adjust the width as needed */
-    height: 100vh;
-    background-color: var(--bg);
-    padding: 20px;
-    z-index: 99; /* Ensure the sidebar is behind the header */
+.contact {
+  padding: 60px 13% 20px; 
+  color: black;
+  text-align: center;
+  min-height: 80%; 
+  background-color: var(--bg);
 
-    text-align: center;
+  font-family: "Open Sans", sans-serif;
+  font-size: x-large;
+  line-height: 2em;
+  text-align: left;
 }
 
-.main-content {
-    margin-left: 30%; /* Ensure main content doesn't overlap with sidebar */
-    padding: 20px;
-    width: calc(70%); /* Adjust width to account for sidebar */
-    overflow-y: auto; /* Enable vertical scrolling for main content */
-    margin-top: 3%;
+.exp_name {
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  font-size: 25px;
 }
 
-#heading {
-    font-size: 300%;
+.exp_time {
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  margin-top: -35px;
 }
 
-#Description {
-    font-size: 120%;
+.exp_info {
+  font-family: "Open Sans", sans-serif;
+  font-size: 25px;
+  margin-top: -20px;
+  margin-left: 5%;
 }
 
-img {
-    border: 5px solid var(--accent);
-    border-radius: 15px;
-  }
-
-  .tags a {
-    font-size: 90%;
-    margin-right: 10px;
-    margin-left: 10px;
+#contacter {
+  font-family: "Open Sans", sans-serif;
 }
 
-#date {
-    font-size: 70%;
-    margin-right: 10px;
+.links {
+  color: black;
 }
